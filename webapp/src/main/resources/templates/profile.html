@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .image-placeholder {
+            background-color: #eee;
+            height: 300px;
+            width: 200px;
+        }
+
+        h4{
+            margin-top:10%
+        }
+        body{
+            margin:0px;
+            background-color: #D9D6CF;
+            /*background: linear-gradient(grey, lightblue);*/
+        }
+        p{margin-top:10px}
+
+        /*p,h2{margin: 0%}*/
+
+        /*#id,#image{*/
+            /*margin: 0%;*/
+            /*width: 50%;*/
+            /*display: inline-block*/
+        /*;*/
+
+        .top_half{
+            display: flex;
+        }
+        .top_half > .box_section{
+            flex: 1; /*grow*/
+            padding: 10px;
+            margin:10px
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+<div style="display: inline; float: right; margin: 20px">
+<a href = "/logout" method = "get">Logout</a>
+</div>
+<div style="display: inline; float: left; margin: 20px">
+Welcome <a th:text="${session.puser}"></a>
+</div>
+
+
+
+
+
+<div class="top_half">
+<br><br>
+<div class="box_section">
+<h4>About Me </h4>
+<div th:unless="${session.user} != null"> <p th:text="${session.text}">Test</p></div>
+
+
+<form action = "/aboutMe" method = "post" maxlength = "150">
+    <textarea class="form-control" rows="4" cols="50" placeholder = "Enter About me" name = "bio"></textarea>
+    <div>
+        <p><input id="submit1" class= "btn btn-primary" type="submit" value="Add" /></p>
+    </div>
+</form>
+</div>
+
+    <br><br>
+<div class="box_section">
+
+<form action="/saveImage" method="post" accept = "image" enctype="multipart/form-data">
+    <h4>Upload Your Image</h4>
+    <span>
+        <p><input type="file" name="images"/></p>
+    </span>
+
+    <span>
+        <p><input class= "btn btn-primary" id="submit" type="submit" value="Upload Image" /></p>
+    </span>
+
+</form>
+<div class="image-placeholder">
+    <img th:src="${session.image}" alt = "image" height="300" width="250"/>
+</div>
+<div>
+<form method="get" action="/deleteImage">
+    <p><input type="submit" class="btn btn-danger" value="Delete"/></p>
+</form>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

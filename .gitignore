@@ -1,0 +1,33 @@
+.gradle
+/build/
+
+*.pptx
+*.pdf
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+.idea/
+build/**/*
+.gradle/**/*
+webapp/out/**/*
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+

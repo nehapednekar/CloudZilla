@@ -1,0 +1,34 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<style>
+    body{margin:0px}
+    body{
+        background-image: url(https://s3.amazonaws.com/ranadeep.space/images/abstract-background-business-327070.jpg);
+        background-size: 100%}
+    #loginform{
+    margin-top: 5%;
+    margin-left: 5%;
+
+    }
+</style>
+
+<body>
+
+<div id="loginform">
+<form action="/login" method="post">
+    <b>User Name:</b> <input class="form-group" type="email" name="username"/>
+    <b>Password: </b><input class="form-group" type="password" name="password"/>
+    <input class="btn btn-primary"  type="Submit" value="Login"/>
+
+</form>
+
+<a class="btn btn-primary" href="register.html"> Register</a>
+<a class="btn btn-primary" href="search.html"> Search</a>
+<a class="btn btn-primary" href="forgotpassword.html">Forgot Password</a>
+</div>
+</body>
+</html>

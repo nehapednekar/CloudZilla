@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+    <title>Current Time is:</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+
+<body>
+<span id="clock"></span>
+<script>
+
+    var clockElement = document.getElementById( "clock" );
+    function updateClock ( clock ) {
+        clock.innerHTML = Date();
+
+
+    }
+
+    setInterval(function () {
+        updateClock( clockElement );
+    }, 1000);
+
+</script>
+
+<a href = "/logout" method = "get">Logout</a>
+<a href = "/profile" method = "get">Profile</a>
+</body>
+</html>

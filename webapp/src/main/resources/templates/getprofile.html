@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile</title>
+</head>
+<body>
+
+<b>This is the Profile Page of <p th:text="${session.puser}"></p></b>
+
+<span><b>About me: </b><p th:text="${session.text}">Test</p></span>
+
+<img th:src="${session.image}" alt = "image1" height="300" width="300" />
+
+</body>
+
+</html>
