@@ -1,3 +1,22 @@
+Summary:
+
+A cloud native portfolio application which uses Spring Boot and Amazon Web Services like EC2, S3, Lambda, Simple Notification Service, Simple Email Service, Route 53, DynamoDB, CodeDeploy, Auto Scaling, Load Balancing and RDS etc.
+
+
+Features:
+
+1. Public portfolio Application which lets user upload images and about me on the website
+2. Entire infrastructure is maintained using CloudFormation
+3. Springboot application with MySQL Database on RDS for data persistence and S3 for image persistence
+4. Enabled Auto-scaling and Load Balancing and integrated with Route 53
+5. Implementation of CI/CD Pipeline using Travis, S3 and CodeDeploy
+6. Implementation of Forgot Password requests using SNS, Lambda, SES and DynamoDB 
+7. Enables user to search another user's details without having to sign in
+8. Unit-test scripts using JMeter
+
+
+
+How to run the application?
 
 Clone the repository in your local machine
 
